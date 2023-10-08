@@ -18,13 +18,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "build": "storybook build && echo 'https://ui.kaizokulabs.com' > storybook-static/CNAME",
     "storybook": "storybook dev -p 6006",
-    "predeploy": "storybook build",
-    "deploy-storybook": "gh-pages -d storybook-static"
+    "deploy": "gh-pages -d storybook-static"
   },
   "eslintConfig": {
     "extends": [
@@ -54,6 +50,7 @@
     "@storybook/react": "^7.4.6",
     "@storybook/react-webpack5": "^7.4.6",
     "@storybook/testing-library": "^0.2.2",
+    "@storybook/theming": "^7.4.6",
     "autoprefixer": "^10.4.16",
     "gh-pages": "^6.0.0",
     "postcss": "^8.4.31",
