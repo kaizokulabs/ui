@@ -1,5 +1,6 @@
 {
-  "name": "ui",
+  "name": "@kaizokulabs/ui",
+  "homepage": "https://ui.kaizokulabs.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,7 +23,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "predeploy": "storybook build",
+    "deploy-storybook": "gh-pages -d storybook-static"
   },
   "eslintConfig": {
     "extends": [
@@ -53,6 +55,7 @@
     "@storybook/react-webpack5": "^7.4.6",
     "@storybook/testing-library": "^0.2.2",
     "autoprefixer": "^10.4.16",
+    "gh-pages": "^6.0.0",
     "postcss": "^8.4.31",
     "storybook": "^7.4.6",
     "tailwindcss": "^3.3.3",
