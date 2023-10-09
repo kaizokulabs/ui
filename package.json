@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/kaizokulabs/ui.git"
   },
-  "version": "0.1.7",
+  "version": "v0.1.10",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
