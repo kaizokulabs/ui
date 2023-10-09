@@ -36,7 +36,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          tags: true
+          fetch-tags: true
           ref: ${{ github.event.inputs.tag_name }}
       - uses: actions/setup-node@v3
         with:
