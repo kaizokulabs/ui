@@ -31,7 +31,6 @@
     "build": "rollup -c",
     "sb-build": "storybook build",
     "storybook": "storybook dev -p 6006",
-    "deploy": "gh-pages -d storybook-static"
   },
   "eslintConfig": {
     "extends": [
