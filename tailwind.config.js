@@ -89,4 +89,9 @@ module.exports = {
     },
   },
   plugins: [],
+  safelist: [
+    {
+      pattern: /.+-(background|text|primary|secondary|accent).*/,
+    },
+  ],
 }

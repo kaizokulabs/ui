@@ -2245,6 +2245,14 @@
     "@rollup/pluginutils" "^3.1.0"
     magic-string "^0.25.7"
 
+"@rollup/plugin-typescript@^11.1.5":
+  version "11.1.5"
+  resolved "https://registry.yarnpkg.com/@rollup/plugin-typescript/-/plugin-typescript-11.1.5.tgz#039c763bf943a5921f3f42be255895e75764cb91"
+  integrity sha512-rnMHrGBB0IUEv69Q8/JGRD/n4/n6b3nfpufUu26axhUcboUzv/twfZU8fIBbTOphRAe0v8EyxzeDpKXqGHfyDA==
+  dependencies:
+    "@rollup/pluginutils" "^5.0.1"
+    resolve "^1.22.1"
+
 "@rollup/pluginutils@^3.1.0":
   version "3.1.0"
   resolved "https://registry.npmjs.org/@rollup/pluginutils/-/pluginutils-3.1.0.tgz"
@@ -10797,7 +10805,7 @@ react-docgen@^5.0.0:
 
 react-dom@^18.2.0:
   version "18.2.0"
-  resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.2.0.tgz#22aaf38708db2674ed9ada224ca4aa708d821e3d"
   integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
   dependencies:
     loose-envify "^1.1.0"
@@ -11394,7 +11402,7 @@ saxes@^5.0.1:
 
 scheduler@^0.23.0:
   version "0.23.0"
-  resolved "https://registry.npmjs.org/scheduler/-/scheduler-0.23.0.tgz"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.23.0.tgz#ba8041afc3d30eb206a487b6b384002e4e61fdfe"
   integrity sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==
   dependencies:
     loose-envify "^1.1.0"
@@ -12778,11 +12786,6 @@ wcwidth@^1.0.1:
   integrity sha512-XHPEwS0q6TaxcvG85+8EYkbiCux2XtWG2mkc47Ng2A77BQu9+DqIOJldST4HgPkuea7dvKSj5VgX3P1d4rW8Tg==
   dependencies:
     defaults "^1.0.3"
-
-web-vitals@^2.1.4:
-  version "2.1.4"
-  resolved "https://registry.npmjs.org/web-vitals/-/web-vitals-2.1.4.tgz"
-  integrity sha512-sVWcwhU5mX6crfI5Vd2dC4qchyTqxV8URinzt25XqVh+bHEPGH4C3NPrNionCP7Obx59wrYEbNlw4Z8sjALzZg==
 
 webidl-conversions@^3.0.0:
   version "3.0.1"
