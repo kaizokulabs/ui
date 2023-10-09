@@ -3,6 +3,10 @@ name: Release Workflow
 
 on:
   workflow_dispatch:
+    inputs:
+      release.tag_name:
+        description: 'Tag name'
+        required: true
   release:
     types: [published]
 
