@@ -4,9 +4,6 @@ on:
   workflow_dispatch:
   release:
     types: [published]
-  # TODO remove after debugging
-  push:
-    branches: [main]
 
 permissions:
   contents: read
