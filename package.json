@@ -2,7 +2,13 @@
   "name": "@kaizokulabs/ui",
   "homepage": "https://ui.kaizokulabs.com",
   "version": "0.1.0",
-  "private": true,
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -18,7 +24,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "build": "storybook build && echo 'https://ui.kaizokulabs.com' > storybook-static/CNAME",
+    "build": "rollup -c",
+    "sb-build": "storybook build && echo 'https://ui.kaizokulabs.com' > storybook-static/CNAME",
     "storybook": "storybook dev -p 6006",
     "deploy": "gh-pages -d storybook-static"
   },
@@ -41,6 +48,8 @@
     ]
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.5",
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "@storybook/addon-essentials": "^7.4.6",
     "@storybook/addon-interactions": "^7.4.6",
     "@storybook/addon-links": "^7.4.6",
@@ -54,6 +63,10 @@
     "autoprefixer": "^10.4.16",
     "gh-pages": "^6.0.0",
     "postcss": "^8.4.31",
+    "rollup": "^4.0.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.36.0",
     "storybook": "^7.4.6",
     "tailwindcss": "^3.3.3",
     "webpack": "^5.88.2",

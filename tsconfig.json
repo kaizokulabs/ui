@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "outDir": "dist",
     "lib": [
       "dom",
       "dom.iterable",
@@ -24,5 +25,8 @@
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules",
+    "src/stories"
+  ]
 }
