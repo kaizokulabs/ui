@@ -35,9 +35,9 @@ jobs:
     needs: bump-version
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-tags: true
-          ref: ${{ github.event.inputs.tag_name }}
+      - run: |
+          git fetch --unshallow --tags
+          git checkout ${{ github.event.inputs.tag_name }}
       - uses: actions/setup-node@v3
         with:
           node-version: '20.x'
