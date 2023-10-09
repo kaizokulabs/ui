@@ -30,7 +30,7 @@
   "scripts": {
     "build": "rollup -c",
     "sb-build": "storybook build",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "storybook dev -p 6006"
   },
   "eslintConfig": {
     "extends": [
