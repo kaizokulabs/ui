@@ -4,7 +4,7 @@ name: Release Workflow
 on:
   workflow_dispatch:
     inputs:
-      release.tag_name:
+      tag_name:
         description: 'Tag name'
         required: true
   release:
@@ -23,7 +23,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '20.x'
-      - run: yarn version --new-version ${{ github.event.release.tag_name }}
+      - run: yarn version --new-version ${{ github.event.inputs.tag_name }}
       - run: git push --follow-tags origin main
 
   npm-publish:
