@@ -11,23 +11,38 @@ permissions:
   id-token: write
 
 jobs:
-  npm-publish:
+  bump-version:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
           node-version: '20.x'
-          registry-url: 'https://registry.npmjs.org'
-          scope: '@kaizokulabs'
       - run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
           yarn version --new-version ${{ github.event.release.tag_name }}
+          git tag ${{ github.event.inputs.tag_name }}
+          git push -f origin ${{ github.event.inputs.tag_name }}
+          git push -f origin HEAD:main --tags
+
+  npm-publish:
+    runs-on: ubuntu-latest
+    needs: bump-version
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-tags: true
+          ref: v${{ github.event.inputs.tag_name }}
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+          registry-url: 'https://registry.npmjs.org'
+          scope: '@kaizokulabs'
+      - run: |
+          yarn
+          yarn build
           yarn publish --access public
-      - run: git tag -f ${{ github.event.release.tag_name }}
-      - run: git push origin ${{ github.event.release.tag_name }} --force
-      - run: git push origin main --tags --force
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
