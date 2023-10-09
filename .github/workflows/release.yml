@@ -23,7 +23,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           yarn version --new-version ${{ github.event.release.tag_name }}
       - run: git tag -f ${{ github.event.release.tag_name }}
-      - run: git push --follow-tags
+      - run: git push origin ${{ github.event.release.tag_name }} --force
 
   npm-publish:
     runs-on: ubuntu-latest
