@@ -24,7 +24,6 @@ jobs:
           yarn version --new-version ${{ github.event.release.tag_name }}
           git tag ${{ github.event.inputs.tag_name }}
           git push -f origin ${{ github.event.inputs.tag_name }}
-          git push -f origin HEAD:main --tags
 
   npm-publish:
     runs-on: ubuntu-latest
