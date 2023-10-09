@@ -1,6 +1,10 @@
 {
   "name": "@kaizokulabs/ui",
   "homepage": "https://ui.kaizokulabs.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/octocat/my-other-repo.git"
+  },
   "version": "0.1.0",
   "license": "MIT",
   "main": "dist/index.js",
@@ -25,7 +29,7 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "sb-build": "storybook build && echo 'https://ui.kaizokulabs.com' > storybook-static/CNAME",
+    "sb-build": "storybook build",
     "storybook": "storybook dev -p 6006",
     "deploy": "gh-pages -d storybook-static"
   },
