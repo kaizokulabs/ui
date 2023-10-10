@@ -13,23 +13,8 @@
   "files": [
     "dist"
   ],
-  "dependencies": {
-    "@rollup/plugin-typescript": "^11.1.5",
-    "@testing-library/dom": "^9.3.3",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.58",
-    "@types/react": "^18.2.25",
-    "@types/react-dom": "^18.2.11",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.9.5"
-  },
   "scripts": {
-    "build": "rollup -c",
+    "build": "NODE_ENV=production rollup -c",
     "sb-build": "storybook build",
     "storybook": "storybook dev -p 6006"
   },
@@ -51,13 +36,31 @@
       "last 1 safari version"
     ]
   },
+  "dependencies": {
+    "@testing-library/dom": "^9.3.3",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.58",
+    "@types/react": "^18.2.25",
+    "@types/react-dom": "^18.2.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.9.5"
+  },
   "devDependencies": {
     "@babel/core": "^7.23.0",
     "@babel/plugin-syntax-flow": "^7.22.5",
     "@babel/plugin-transform-private-property-in-object": "^7.22.11",
     "@babel/plugin-transform-react-jsx": "^7.22.15",
+    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-react": "^7.22.15",
+    "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^25.0.5",
     "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.5",
     "@storybook/addon-essentials": "^7.4.6",
     "@storybook/addon-interactions": "^7.4.6",
     "@storybook/addon-links": "^7.4.6",
@@ -68,10 +71,10 @@
     "@storybook/react-webpack5": "^7.4.6",
     "@storybook/testing-library": "^0.2.2",
     "@storybook/theming": "^7.4.6",
-    "autoprefixer": "^10.4.16",
+    "autoprefixer": "^9",
+    "babel-loader": "^9.1.3",
     "babel-plugin-named-exports-order": "^0.0.2",
-    "gh-pages": "^6.0.0",
-    "postcss": "^8.4.31",
+    "postcss": "^7",
     "prop-types": "^15.8.1",
     "rollup": "^4.0.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
@@ -80,5 +83,9 @@
     "storybook": "^7.4.6",
     "tailwindcss": "^3.3.3",
     "webpack": "^5.88.2"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }

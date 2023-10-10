@@ -1,3 +1,4 @@
+import babel from "@rollup/plugin-babel";
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
@@ -28,6 +29,10 @@ export default [
       },
     ],
     plugins: [
+      babel({
+        babelHelpers: "bundled",
+        exclude: "node_modules/**",
+      }),
       peerDepsExternal(),
       resolve(),
       commonjs(),

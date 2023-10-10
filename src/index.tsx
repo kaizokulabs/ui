@@ -1,2 +1,4 @@
 
-export * from "./components/Button";
+require("@/index.css");
+
+export * from "@/components/Button";
