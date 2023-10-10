@@ -49,16 +49,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Prepare repository
-        run: git fetch --unshallow --tags
       - name: Use Node.js
         uses: actions/setup-node@v3
-      - name: Install dependencies
-        run: yarn install
-      - name: Build Storybook
-        run: yarn sb-build
-      - name: Add CNAME for gh-pages
-        run: |
+      - run: |
+          yarn install
+          yarn sb-build
           echo 'https://ui.kaizokulabs.com' > storybook-static/CNAME
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
